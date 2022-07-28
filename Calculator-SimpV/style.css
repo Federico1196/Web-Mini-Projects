@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    outline: 0;
+}
+
+body {
+    background-color: #202020;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.container {
+    height: 100vh;  /* moves the placement of the box, goes down 100px */
+    width: 100vw;   /* moves the placement of the box, goes to the right 100px */
+    display: grid;
+    place-items: center;   
+
+}
+
+.calculator {
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    background-color: black;
+}
+
+#display {
+    margin: 0 12px;
+    height: 150px;
+    width: auto;
+    max-width: 270px;
+    display: flex;
+    align-items: flex-end;        /* Sets the items in the screen to the left */
+    justify-content: flex-end;
+    font-size: 44px;
+    margin-bottom: 20px;
+    overflow-x: scroll;
+
+}
+
+.calculator #display {
+    color: rgb(238, 238, 238);
+}
+
+#display::-webkit-scrollbar {
+    display: block;
+    height: 3px;
+}
+
+button {                  
+    height: 60px;
+    width: 60px;
+    border: 0;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/*
+ for this last class we wrote button {} instead of .buttons {} because 
+ we are refearing to all the tags <buttons> in the html
+
+*/
+
+button:hover {
+    transform: scale(1.1);  /* buttons will change size when we hover */
+}
+
+
+
+button#percent {
+    background-color: rgb(140, 140, 140);
+    color: rgb(29, 29, 29);
+    font-weight: bold;
+}
+
+.calculator button.zero {
+    background-color: rgb(52, 52, 52);
+    color: rgb(207, 207, 207);
+    width: 134px;
+    padding-right: 72px;
+}
+
+.calculator button.operator {
+    background-color: rgb(255, 166, 0);
+    color: white;
+    font-weight: bold;
+}
+
+.calculator button.action {
+    background-color: rgb(140, 140, 140);
+    color: rgb(29, 29, 29);
+    font-weight: bold;
+}
+
+.calculator button.number {
+    background-color: rgb(52, 52, 52);
+    color: rgb(207, 207, 207);
+}
+
+
+
+
+
+
